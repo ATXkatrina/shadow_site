@@ -54,8 +54,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'activeadmin', github: 'activeadmin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+gem 'active_admin_editor', github: 'ejholmes/active_admin_editor'
 gem 'devise'
-gem 'active_admin_editor'
+# gem 'active_admin_editor'
 gem 'font-awesome-rails'
 gem 'bootstrap-sass', '3.2.0'
 gem 'autoprefixer-rails'
