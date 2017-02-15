@@ -21,13 +21,14 @@
       <div class="ui inverted vertical center aligned purple segment">
         <div class="ui container">
           <div class="ui large secondary inverted menu">
-            <%= link_to "Home", { controller: "welcome" }, :class => "item" %>
-            <%= link_to "Blog", { controller: "articles"}, :class => "item" %>
+            <%= link_to "Home", { controller: "/welcome" }, :class => "item" %>
+            <%= link_to "Blog", { controller: "/articles"}, :class => "item" %>
             <a class="item">Pulps</a>
             <a class="item">Collectibles</a>
             <div class="right item">
-              <a class="ui inverted button">Log in</a>
-              <a class="ui inverted button">Sign Up</a>
+              <%= link_to "Sign Up", new_user_registration_path, :class => "ui inverted button" %>
+              <%= link_to "Log In", user_session_path, :class => "ui inverted button" %>
+              <%= link_to "Sign Out", destroy_user_session_path, :class => "ui inverted button", :method => :delete %>
             </div>
           </div>
         </div>
