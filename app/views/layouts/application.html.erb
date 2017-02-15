@@ -25,15 +25,31 @@
             <%= link_to "Blog", { controller: "/articles"}, :class => "item" %>
             <a class="item">Pulps</a>
             <a class="item">Collectibles</a>
-            <div class="right item">
-              <%= link_to "Sign Up", new_user_registration_path, :class => "ui inverted button" %>
-              <%= link_to "Log In", user_session_path, :class => "ui inverted button" %>
-              <%= link_to "Sign Out", destroy_user_session_path, :class => "ui inverted button", :method => :delete %>
-            </div>
+
+
+              <% if current_user %>
+                <div class="ui right dropdown item">
+                  <div class="text"><%=current_user.email%></div>
+                  <i class="dropdown icon"></i>
+                  <div class="menu">
+                    <div class="item">Sign Out</div>
+                  </div>
+                </div>
+
+                <%= link_to "Sign Out", destroy_user_session_path, :class => "ui inverted button", :method => :delete %>
+              <% else %>
+                <div class="right item">
+                  <%= link_to "Sign Up", new_user_registration_path, :class => "ui inverted button" %>
+                  <%= link_to "Log In", user_session_path, :class => "ui inverted button" %>
+                </div>
+              <% end %>
+
+
           </div>
         </div>
       </div>
     </div>
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
