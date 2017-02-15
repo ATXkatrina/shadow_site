@@ -28,15 +28,15 @@
 
 
               <% if current_user %>
-                <div class="ui right dropdown item">
-                  <div class="text"><%=current_user.email%></div>
+                <div class="ui right inverted purple compact menu">
+                <div class="ui simple dropdown item">
+                  <%=current_user.email%>
                   <i class="dropdown icon"></i>
                   <div class="menu">
-                    <div class="item">Sign Out</div>
+                    <div class="item"><%= link_to "Sign Out", destroy_user_session_path,:method => :delete %></div>
                   </div>
                 </div>
-
-                <%= link_to "Sign Out", destroy_user_session_path, :class => "ui inverted button", :method => :delete %>
+                </div>
               <% else %>
                 <div class="right item">
                   <%= link_to "Sign Up", new_user_registration_path, :class => "ui inverted button" %>
