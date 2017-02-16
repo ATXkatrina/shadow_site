@@ -36,5 +36,6 @@ $(document)
         .sidebar('attach events', '.toc.item')
       ;
 
+
     })
   ;
