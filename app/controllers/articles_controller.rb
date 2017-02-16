@@ -1,16 +1,18 @@
 class ArticlesController < ApplicationController
 
+  skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
-    @articles = Article.all
+    @articles = Article.all.order({ created_at: :desc })
   end
 
   def new
-    # @article = Article.new
-    @article = current_user.posts.build
+    @article = Article.new
   end
 
   def create
     @article = Article.new(article_params)
+    @article.user = current_user
     if @article.save
       redirect_to @article
     else
