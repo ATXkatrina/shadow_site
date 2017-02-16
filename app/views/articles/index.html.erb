@@ -1,12 +1,10 @@
-<h1>Listing articles</h1>
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-  </tr>
-
+<container>
   <% @articles.each do |article| %>
+
+    <h1><%= article.title %></h1>
+    <p>By <%= article.user.email %> | </p>
+    <p><%= article.text %></p>
+
     <tr>
       <td><%= article.title %></td>
       <td><%= article.text %></td>
@@ -17,4 +15,4 @@
       data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
-</table>
+</container>
