@@ -1,23 +1,3 @@
 # ShadowSite
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
+This is a work-in-progress site for Sanctum Books, a San-Antonio-based independent publisher of licenced pulp novel reprints of the '30s and '40s.
