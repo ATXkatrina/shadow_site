@@ -27,35 +27,4 @@ class User < ApplicationRecord
     end
   end
 
-  # def password_required?
-  #   super && provider.blank?
-  # end
-
-  # def update_with_password(params, *options)
-  #   if encrypted_password.blank?
-  #     update_attributes(params, *options)
-  #   else
-  #     super
-  #   end
-  # end
-
-    # data = auth.info
-    # user = User.where(:email => data["email"]).first
-
-    # Uncomment the section below if you want users to be created if they don't exist
-    # unless user
-    #     user = User.create(name: data["name"],
-    #        email: data["email"],
-    #        password: Devise.friendly_token[0,20]
-    #     )
-    # end
-    # user
-  #     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
-  #       user.provider = auth.provider
-  #       user.uid = auth.uid
-  #       user.email = auth.info.email
-  #       user.password = Devise.friendly_token[0,20]
-  #     end
-  # end
-  # end
 end
