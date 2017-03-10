@@ -1,9 +1,9 @@
-<container>
+<div>
   <% @articles.each do |article| %>
 
     <%= render :partial => "article", :locals => { :layout => false , :article => article } %>
 
   <% end %>
-</container>
+</div>
 <br>
 <%= link_to 'Back', welcome_index_path %>

@@ -1,2 +1,6 @@
-<%= render :partial => "article", :locals => { :layout => false , :article => @article } %>
+<div class="ui centered grid">
+<div class="twelve wide column">
+  <%= render :partial => "article", :locals => { :layout => false , :article => @article } %>
 <%= link_to "Back", articles_path %>
+</div>
+</div>
