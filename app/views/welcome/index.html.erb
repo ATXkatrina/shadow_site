@@ -17,21 +17,15 @@
 <div class="ui vertical stripe segment">
   <div class="ui middle aligned stackable grid container">
       <div class="row">
-        <div class="eight wide column">
-          <h3 class="ui header">We Have Stories</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <h3 class="ui header">We Make Bananas That Can Dance</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="twelve wide column">
+          <% @recent_articles.each do |a| %>
+            <div>
+                <img src="/assets/sample-image.png" class="ulargbordered rounded image">
+                <h3><%= a.title %></h3>
+                <p><%= a.text %></p>
+            </div>
+            <br>
+          <% end %>
         </div
         <div class="six wide right floated column">
           <img src="/assets/sample-image.png" class="ulargbordered rounded image">
