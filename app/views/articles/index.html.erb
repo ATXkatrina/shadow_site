@@ -5,7 +5,7 @@
   <% end %>
   <%= link_to 'Back', welcome_index_path %>
   <% if current_user && current_user.is_admin %>
-    <%= link_to 'New Post', new_article_path %>
+    | <%= link_to 'New Post', new_article_path %>
   <% end %>
   </div>
 </div>
