@@ -1,11 +1,12 @@
 <div class="ui centered grid">
   <div class="twelve wide column">
   <% @articles.each do |article| %>
-
     <%= render :partial => "article", :locals => { :layout => false , :article => article } %>
-
   <% end %>
   <%= link_to 'Back', welcome_index_path %>
+  <% if current_user && current_user.articles.count > 0 %>
+    <%= link_to 'New Post', new_article_path %>
+  <% end %>
   </div>
 </div>
 <br>
